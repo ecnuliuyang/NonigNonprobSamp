@@ -1,0 +1,18 @@
+Package: NonigNonprobSamp
+Type: Package
+Title: Statistical inference with nonignorable non-probability survey samples
+Version: 0.1.0
+Author: c(person("Liu", "Yang",
+            email = "liuyangecnu@163.com", 
+            role=c("aut","cre")))
+Maintainer: Yang Liu <liuyangecnu@163.com>
+Description: This package offers a pseudo-likelihood method for estimating participation probabilities in nonignorable non-probability samples, utilizing auxiliary information from an existing reference probability sample. Additionally, we develop three estimators for the finite population mean, employing regression-based prediction, inverse probability weighting (IPW), and augmented IPW techniques.
+License: GPL-2
+Encoding: UTF-8
+LazyLoad: yes
+LazyData: true
+RoxygenNote: 7.3.2
+Depends: R (>= 3.5.0)
+Imports: stats, samplingVarEst
+Suggests: rmarkdown, testthat (>= 2.1.0)
+
