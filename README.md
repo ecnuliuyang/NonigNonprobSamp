@@ -24,7 +24,7 @@ install_github("ecnuliuyang/NonigNonprobSamp")
 
 To reproduce analyses of the ESPACOV survey data in Liu et al. (2024), we present the corresponding code as follows. 
 
-+ Code to summarize the descriptions of variables
++ Code to summarize the data sets
   
 library(NonigNonprobSamp)
 
@@ -43,20 +43,21 @@ MAR (sampA, sampB)$mu # Chen et al. (2020)'s method
 + Code to calculate the estimates of the population proportion of Spaniards experiencing good moods and the standard errors under the nonignorable participation mechanism
   
 estMNAR <- MNAR (sampA, sampB)
+
 estMNAR$mu
+
 se <- seNMAR (sampA, sampB, estMNAR)
+
 se$seMu
 
 
 - Code to calculate the estimates of the estimated regression coefficients in the nonignorable participation model
 
-cbind(round(estMNAR$theta,3), round(se$seTheta,3),
-      round(2*(1 - pnorm(abs(estMNAR$theta)/se$seTheta)),3))
+cbind(round(estMNAR$theta,3), round(se$seTheta,3), round(2*(1 - pnorm(abs(estMNAR$theta)/se$seTheta)),3))
 
 + Code to calculate the estimates of the estimated regression coefficients in the outcome regression model
 
-cbind(round(estMNAR$xi,3), round(se$seXi,3),
-      round(2*(1 - pnorm(abs(estMNAR$xi)/se$seXi)),3))
+cbind(round(estMNAR$xi,3), round(se$seXi,3), round(2*(1 - pnorm(abs(estMNAR$xi)/se$seXi)),3))
 
 
 # Reference
